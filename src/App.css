@@ -45,15 +45,19 @@ body {
 }
 
 .add-btn {
+  grid-column: span 1; /* stays in its own column */
+  width: 230px;
   height: 336px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #718cab;
+  color: white;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  background: #718cab;
-  color: white;
   cursor: pointer;
-  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .add-btn:hover {
