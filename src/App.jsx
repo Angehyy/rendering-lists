@@ -9,18 +9,24 @@ function App() {
         <h1>Book Catalog</h1>
       </header>
 
-      <main className="content">
-        {data.map((book) => (
-          <BookCard
-            key={book.isbn13}
-            image={book.image}
-            title={book.title}
-            price={book.price} // now showing price
-            url={book.url}
-          />
-        ))}
+      <main className="main-content">
+        {/* Left grid with book cards */}
+        <div className="grid-area">
+          {data.map((book) => (
+            <BookCard
+              key={book.isbn13}
+              image={book.image}
+              title={book.title}
+              price={book.price}
+              url={book.url}
+            />
+          ))}
+        </div>
 
-        <button className="add-btn">+</button>
+        {/* Right column with add button */}
+        <div className="add-area">
+          <button className="add-btn">+</button>
+        </div>
       </main>
 
       <footer className="footer">
